@@ -14,4 +14,3 @@ PSCS Management is a web application provides the following:
 - [Promote organization profile](http://pscs.org.ph/).
 - Share society informations.
 - Manage memberships.
-
