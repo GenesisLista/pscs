@@ -1,11 +1,12 @@
 <div id="left-sidebar" class="sidebar ">
-    <h5 class="brand-name">Epic HR <a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
+    <h5 class="brand-name">PSCS <a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
     <nav id="left-sidebar-nav" class="sidebar-nav">
         <ul class="metismenu">
-            <li class="g_heading">Hr</li>
-            <li class="{{ Request::segment(2) === 'index' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
-            <li class="{{ Request::segment(2) === 'users' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-users"></i><span>Users</span></a></li>
-            <li class="{{ Request::segment(2) === 'departments' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-control-pause"></i><span>Departments</span></a></li>
+            <li class="g_heading">Member</li>
+            <li class="{{ Request::segment(2) === 'home' ? 'active' : null }}"><a href="{{ url('home') }}"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
+            <li class="{{ Request::segment(2) === 'member' ? 'active' : null }}"><a href="{{ route('member.index') }}"><i class="icon-users"></i><span>Member</span></a></li>
+
+            <!-- <li class="{{ Request::segment(2) === 'departments' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-control-pause"></i><span>Departments</span></a></li>
             <li class="{{ Request::segment(2) === 'employee' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-user"></i><span>Employee</span></a></li>
             <li class="{{ Request::segment(2) === 'activities' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-equalizer"></i><span>Activities</span></a></li>
             <li class="{{ Request::segment(2) === 'holidays' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-like"></i><span>Holidays</span></a></li>
@@ -45,7 +46,7 @@
                     <li class="{{ Request::segment(2) === 'error404' ? 'active' : null }}"><a href="javascript:void(0)">Error 404</a></li>
                     <li class="{{ Request::segment(2) === 'error500' ? 'active' : null }}"><a href="javascript:void(0)">Error 500</a></li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
     </nav>        
 </div>
