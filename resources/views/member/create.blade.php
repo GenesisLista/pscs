@@ -192,7 +192,7 @@
                         </div>
                         <div class="col-12">
                             <button type="button" class="btn btn-primary">Add</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+                            <a class="btn btn-secondary" href="{{ route('member.index') }}">Close</a>
                         </div>
                     </div>
                 </div>
