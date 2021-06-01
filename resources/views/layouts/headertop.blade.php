@@ -1,7 +1,7 @@
 <div id="header_top" class="header_top">
     <div class="container">
         <div class="hleft">
-            <a class="header-brand" href="index.html"><i class="fe fe-command brand-logo"></i></a>
+            <a class="header-brand" href="{{ url('home') }}"><i class="fe fe-command brand-logo"></i></a>
             <div class="dropdown">
                 <a href="javascript:void(0)" class="nav-link icon"><i class="fa fa-search"></i></a>
                 <a href="javascript:void(0)" class="nav-link icon app_inbox"><i class="fa fa-calendar"></i></a>

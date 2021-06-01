@@ -3,48 +3,8 @@
         <div class="page-header">
             <div class="left">
                 <h1 class="page-title">@yield('title')</h1>
-                <select class="custom-select">
-                    <option>Year</option>
-                    <option>Month</option>
-                    <option>Week</option>
-                </select>
-                <div class="input-group xs-hide">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </div>                        
             </div>
             <div class="right">
-                <ul class="nav nav-pills">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Language</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#"><img class="w20 mr-2" src="{{ asset('assets/images/flags/us.svg') }}">English</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><img class="w20 mr-2" src="{{ asset('assets/images/flags/es.svg') }}">Spanish</a>
-                            <a class="dropdown-item" href="#"><img class="w20 mr-2" src="{{ asset('assets/images/flags/jp.svg') }}">japanese</a>
-                            <a class="dropdown-item" href="#"><img class="w20 mr-2" src="{{ asset('assets/images/flags/bl.svg') }}">France</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reports</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#"><i class="dropdown-icon fa fa-file-excel-o"></i> MS Excel</a>
-                            <a class="dropdown-item" href="#"><i class="dropdown-icon fa fa-file-word-o"></i> MS Word</a>
-                            <a class="dropdown-item" href="#"><i class="dropdown-icon fa fa-file-pdf-o"></i> PDF</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Project</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Graphics Design</a>                                    
-                            <a class="dropdown-item" href="#">Angular Admin</a>
-                            <a class="dropdown-item" href="#">PSD to HTML</a>
-                            <a class="dropdown-item" href="#">iOs App Development</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Home Development</a>
-                            <a class="dropdown-item" href="#">New Blog post</a>
-                        </div>
-                    </li>
-                </ul>
                 <div class="notification d-flex">
                     <div class="dropdown d-flex">
                         <a class="nav-link icon d-none d-md-flex btn btn-default btn-icon ml-1" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge badge-success nav-unread"></span></a>
