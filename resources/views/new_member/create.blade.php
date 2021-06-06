@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('parentPageTitle', 'Member')
-@section('title', 'Update Member')
+@section('title', 'Add New Member')
 
 @section('content')
 <div class="section-body mt-3">
@@ -21,7 +21,7 @@
                         </div>
                         <div class="col-md-4 col-sm-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Date of birth *">
+                                <input type="text" data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="Date of birth *">
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-12">
@@ -191,8 +191,8 @@
                             &nbsp;
                         </div>
                         <div class="col-12">
-                            <button type="button" class="btn btn-primary">Update</button>
-                            <a class="btn btn-secondary" href="{{ route('member.index') }}">Close</a>
+                            <button type="button" class="btn btn-primary">Add</button>
+                            <a class="btn btn-secondary" href="{{ route('new.index') }}">Close</a>
                         </div>
                     </div>
                 </div>
@@ -204,11 +204,12 @@
 
 @section('page-styles')
 <link rel="stylesheet" href="{{ asset('assets/plugins/sweetalert/sweetalert.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}">
 @stop
 
 @section('page-script')
 <script src="{{ asset('assets/plugins/sweetalert/sweetalert.min.js') }}"></script>
-
+<script src="{{ asset('assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('assets/js/core.js') }}"></script>
 <script src="{{ asset('assets/js/page/dialogs.js') }}"></script>
 @stop

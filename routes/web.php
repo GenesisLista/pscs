@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\NewMemberController;
+use App\Http\Controllers\ActiveMemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +26,7 @@ Auth::routes();
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     
-    Route::resource('member', MemberController::class);
+    // Route::resource('member', MemberController::class);
+    Route::resource('/member/new', NewMemberController::class);
+    Route::resource('/member/active', ActiveMemberController::class);
 });

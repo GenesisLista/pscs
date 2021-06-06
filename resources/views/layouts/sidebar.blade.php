@@ -4,8 +4,14 @@
         <ul class="metismenu">
             <li class="g_heading">Member</li>
             <li class="{{ Request::segment(2) === 'home' ? 'active' : null }}"><a href="{{ url('home') }}"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
-            <li class="{{ Request::segment(2) === 'member' ? 'active' : null }}"><a href="{{ route('member.index') }}"><i class="icon-users"></i><span>Member</span></a></li>
-
+            <li class="{{ Request::segment(2) === 'member' ? 'active' : null }}">
+                <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="icon-users"></i><span>Member</span></a>
+                <ul>
+                    <li class="{{ Request::segment(2) === 'new' ? 'active' : null }}"><a href="{{ route('new.index') }}">New</a></li>
+                    <li class="{{ Request::segment(2) === 'positions' ? 'active' : null }}"><a href="javascript:void(0)">Active</a></li>
+                    <li class="{{ Request::segment(2) === 'applicants' ? 'active' : null }}"><a href="javascript:void(0)">Renewal</a></li>
+                </ul>
+            </li>
             <!-- <li class="{{ Request::segment(2) === 'departments' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-control-pause"></i><span>Departments</span></a></li>
             <li class="{{ Request::segment(2) === 'employee' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-user"></i><span>Employee</span></a></li>
             <li class="{{ Request::segment(2) === 'activities' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-equalizer"></i><span>Activities</span></a></li>

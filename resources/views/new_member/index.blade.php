@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('parentPageTitle', 'Member')
-@section('title', 'List Member')
+@section('title', 'New Member')
 
 @section('content')
 <div class="section-body">
@@ -11,7 +11,7 @@
                     <li class="nav-item"><a class="nav-link">&nbsp;</a></li>
                 </ul>
                 <div class="header-action">
-                    <a class="btn btn-primary" href="{{ route('member.create') }}"><i class="fe fe-plus mr-2"></i>Add</a>
+                    <a class="btn btn-primary" href="{{ route('new.create') }}"><i class="fe fe-plus mr-2"></i>Add</a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                 <div class="tab-pane fade show active" id="Employee-list" role="tabpanel">                        
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Member List</h3>
+                            <h3 class="card-title">New Member List</h3>
                             <div class="card-options">
                                 <form>
                                     <div class="input-group">
@@ -66,8 +66,8 @@
                                             <td>12 Jun, 2015</td>
                                             <td>Web Designer</td>
                                             <td>
-                                                <a class="btn btn-icon btn-sm" href="{{ route('member.show', 1) }}"><i class="fa fa-eye"></i></a>
-                                                <a class="btn btn-icon btn-sm" href="{{ route('member.edit', 1) }}"><i class="fa fa-edit"></i></a>
+                                                <a class="btn btn-icon btn-sm" href="{{ route('new.show', 1) }}"><i class="fa fa-eye"></i></a>
+                                                <a class="btn btn-icon btn-sm" href="{{ route('new.edit', 1) }}"><i class="fa fa-edit"></i></a>
                                                 <a class="btn btn-icon btn-sm" href=""><i class="fa fa-trash-o text-danger"></i></a>
                                             </td>
                                         </tr>

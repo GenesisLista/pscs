@@ -10,7 +10,7 @@
                 <div class="card c_grid c_yellow">
                     <div class="card-body text-center">
                         <div class="circle">
-                            <img class="rounded-circle" src="../assets/images/sm/avatar1.jpg" alt="">
+                            <img class="rounded-circle" src="{{ asset('assets/images/sm/avatar1.jpg') }}" alt="">
                         </div>
                         <h6 class="mt-3 mb-0">Michelle Green</h6>
                         <span>jason-porter@info.com</span>
@@ -130,7 +130,7 @@
                     </div>
                     <div class="card-body">
                         <div class="timeline_item ">
-                            <img class="tl_avatar" src="../assets/images/xs/avatar1.jpg" alt="">
+                            <img class="tl_avatar" src="{{ asset('assets/images/xs/avatar1.jpg') }}" alt="">
                             <span><a href="javascript:void(0);">Elisse Joson</a> San Francisco, CA <small class="float-right text-right">20-April-2019 - Today</small></span>
                             <h6 class="font600">Hello, 'Im a single div responsive timeline without media Queries!</h6>
                             <div class="msg">
@@ -147,7 +147,7 @@
                                     <ul class="recent_comments list-unstyled mt-4 mb-0">
                                         <li>
                                             <div class="avatar_img">
-                                                <img class="rounded img-fluid" src="../assets/images/xs/avatar4.jpg" alt="">
+                                                <img class="rounded img-fluid" src="{{ asset('assets/images/xs/avatar4.jpg') }}" alt="">
                                             </div>
                                             <div class="comment_body">
                                                 <h6>Donald Gardner <small class="float-right font-14">Just now</small></h6>
@@ -159,14 +159,14 @@
                             </div>                                
                         </div>
                         <div class="timeline_item ">
-                            <img class="tl_avatar" src="../assets/images/xs/avatar4.jpg" alt="">
+                            <img class="tl_avatar" src="{{ asset('assets/images/xs/avatar4.jpg') }}" alt="">
                             <span><a href="javascript:void(0);" title="">Dessie Parks</a> Oakland, CA <small class="float-right text-right">19-April-2019 - Yesterday</small></span>
                             <h6 class="font600">Oeehhh, that's awesome.. Me too!</h6>
                             <div class="msg">
                                 <p>I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.</p>
                                 <div class="timeline_img mb-20">
-                                    <img class="width100" src="../assets/images/gallery/1.jpg" alt="Awesome Image">
-                                    <img class="width100" src="../assets/images/gallery/2.jpg" alt="Awesome Image">
+                                    <img class="width100" src="{{ asset('assets/images/gallery/1.jpg') }}" alt="Awesome Image">
+                                    <img class="width100" src="{{ asset('assets/images/gallery/2.jpg') }}" alt="Awesome Image">
                                 </div>
                                 <a href="javascript:void(0);" class="mr-20 text-muted"><i class="fa fa-heart text-pink"></i> 23 Love</a>
                                 <a class="text-muted" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"><i class="fa fa-comments"></i> 2 Comment</a>
@@ -180,20 +180,20 @@
                                     <ul class="recent_comments list-unstyled mt-4 mb-0">
                                         <li>
                                             <div class="avatar_img">
-                                                <img class="rounded img-fluid" src="../assets/images/xs/avatar4.jpg" alt="">
+                                                <img class="rounded img-fluid" src="{{ asset('assets/images/xs/avatar4.jpg') }}" alt="">
                                             </div>
                                             <div class="comment_body">
                                                 <h6>Donald Gardner <small class="float-right font-14">Just now</small></h6>
                                                 <p>Lorem ipsum Veniam aliquip culpa laboris minim tempor</p>
                                                 <div class="timeline_img mb-20">
-                                                    <img class="width150" src="../assets/images/gallery/7.jpg" alt="Awesome Image">
-                                                    <img class="width150" src="../assets/images/gallery/8.jpg" alt="Awesome Image">
+                                                    <img class="width150" src="{{ asset('assets/images/gallery/7.jpg') }}" alt="Awesome Image">
+                                                    <img class="width150" src="{{ asset('assets/images/gallery/8.jpg') }}" alt="Awesome Image">
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="avatar_img">
-                                                <img class="rounded img-fluid" src="../assets/images/xs/avatar3.jpg" alt="">
+                                                <img class="rounded img-fluid" src="{{ asset('assets/images/xs/avatar3.jpg') }}" alt="">
                                             </div>
                                             <div class="comment_body">
                                                 <h5>Dessie Parks <small class="float-right font-14">1min ago</small></h5>
@@ -205,7 +205,7 @@
                             </div>
                         </div>
                         <div class="timeline_item ">
-                            <img class="tl_avatar" src="../assets/images/xs/avatar7.jpg" alt="">
+                            <img class="tl_avatar" src="{{ asset('assets/images/xs/avatar7.jpg') }}" alt="">
                             <span><a href="javascript:void(0);" title="">Rochelle Barton</a> San Francisco, CA <small class="float-right text-right">12-April-2019</small></span>
                             <h6 class="font600">An Engineer Explains Why You Should Always Order the Larger Pizza</h6>
                             <div class="msg">
