@@ -9,7 +9,7 @@
                 <ul>
                     <li class="{{ Request::segment(2) === 'new' ? 'active' : null }}"><a href="{{ route('new.index') }}">New</a></li>
                     <li class="{{ Request::segment(2) === 'active' ? 'active' : null }}"><a href="{{ route('active.index') }}">Active</a></li>
-                    <li class="{{ Request::segment(2) === 'applicants' ? 'active' : null }}"><a href="javascript:void(0)">Renewal</a></li>
+                    <li class="{{ Request::segment(2) === 'renewal' ? 'active' : null }}"><a href="{{ route('renewal.index') }}">Renewal</a></li>
                 </ul>
             </li>
             <!-- <li class="{{ Request::segment(2) === 'departments' ? 'active' : null }}"><a href="javascript:void(0)"><i class="icon-control-pause"></i><span>Departments</span></a></li>

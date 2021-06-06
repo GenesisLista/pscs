@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\NewMemberController;
 use App\Http\Controllers\ActiveMemberController;
+use App\Http\Controllers\RenewalMemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,5 @@ Route::group(['middleware'=>'auth'], function(){
     
     Route::resource('/member/new', NewMemberController::class);
     Route::resource('/member/active', ActiveMemberController::class);
+    Route::resource('/member/renewal', RenewalMemberController::class);
 });
