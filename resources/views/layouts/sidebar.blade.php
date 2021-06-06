@@ -8,7 +8,7 @@
                 <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="icon-users"></i><span>Member</span></a>
                 <ul>
                     <li class="{{ Request::segment(2) === 'new' ? 'active' : null }}"><a href="{{ route('new.index') }}">New</a></li>
-                    <li class="{{ Request::segment(2) === 'positions' ? 'active' : null }}"><a href="javascript:void(0)">Active</a></li>
+                    <li class="{{ Request::segment(2) === 'active' ? 'active' : null }}"><a href="{{ route('active.index') }}">Active</a></li>
                     <li class="{{ Request::segment(2) === 'applicants' ? 'active' : null }}"><a href="javascript:void(0)">Renewal</a></li>
                 </ul>
             </li>

@@ -13,7 +13,7 @@ class ActiveMemberController extends Controller
      */
     public function index()
     {
-        //
+        return view('active_member.index');
     }
 
     /**
@@ -45,7 +45,7 @@ class ActiveMemberController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('active_member.show');
     }
 
     /**
@@ -56,7 +56,7 @@ class ActiveMemberController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('active_member.edit');
     }
 
     /**
