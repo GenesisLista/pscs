@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>About us</title>
+    <title>PSCS - Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -65,36 +65,33 @@
                             <div class="grid_12">
                                 <nav>
                                     <ul class="sf-menu header_menu">
-                                        <li class="current"><a href="javascript:void(0)">Home<strong></strong></a></li>
+                                        <li class="current"><a href="{{ url('/') }}">Home<strong></strong></a></li>
                                         <li><a href="javascript:void(0)"><span></span>About us<strong></strong></a>
                                             <ul class='submenu'>
-                                                <li><a href="javascript:void(0)">Why join PSCS</a></li>
-                                                <li><a href="javascript:void(0)">Member Directory</a></li>
-                                                <li><a href="javascript:void(0)">History</a></li>
-                                                <li><a href="javascript:void(0)">Board of Directors</a></li>
+                                                <li><a href="{{ url('why-join-us') }}">Why join PSCS</a></li>
+                                                <li><a href="{{ url('member-directory') }}">Member Directory</a></li>
+                                                <li><a href="{{ url('history') }}">History</a></li>
+                                                <li><a href="{{ url('board-of-directors') }}">Board of Directors</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="javascript:void(0)">Projects<strong></strong></a>
                                             <ul class='submenu'>
-                                                <li><a href="javascript:void(0)">Cosmetic Garden</a></li>
+                                                <li><a href="https://youtu.be/rPLnqCVVHNo?autoplay=0&rel=0" target="_blank">Cosmetic Garden</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="javascript:void(0)">News &amp; events<strong></strong></a></li>
+                                        <li><a href="{{ url('news-and-events') }}">News &amp; events<strong></strong></a></li>
                                     </ul>
                                 </nav>
 
                                 <ul class="soc_icons">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="https://www.facebook.com/groups/213264668770406/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCixDzVfrzY7hhyfSFAbrrag/" target="_blank"><i class="fa fa-youtube"></i></a></li>
                                     <li><a href="{{ route('login') }}"><i class="fa fa-sign-in"></i></a></li>
                                 </ul>
 
                                 <div class="clear"></div>
 
                             </div>
-
                         </div>
                     </div>
 
@@ -148,7 +145,7 @@
 
             <div class="container">
 
-            <div class="row">
+                <div class="row">
                     <div class="grid_5">
                         <h2>Welcome message</h2>
                         <p>by Linda L. Yu - President of PSCS</p>
@@ -158,7 +155,7 @@
                             <p>"It is a great honor to lead PSCS as a president. With great vision in mind, our board of
                                 directors accept the challenge to raise the bar of the Filipino cosmetic scientists
                                 through educational seminars by linking to academe and international organizations."</p>
-                            <a href="board_of_directors#welcome_message" class="more_btn bg5">Read More</a>
+                            <a href="{{ url('board-of-directors') }}#welcome_message" class="more_btn bg5">Read More</a>
                         </div>
                     </div>
 
@@ -187,22 +184,21 @@
 
                         </div>
                     </div>
-
                 </div>
 
             </div>
 
             <div class="box-2">
-            <div class="container">
+                <div class="container">
                     <div class="row">
                         <div class="grid_3">
                             <h2 class="no_line">useful links</h2>
                             <ul class="listWithMarker">
-                                <li><a href="why_join" target="_blank">Why join PSCS?</a></li>
-                                <li><a href="become_member" target="_blank">How to become a member?</a></li>
-                                <li><a href="member_directory" target="_blank">Members directory</a></li>
-                                <li><a href="board_of_directors" target="_blank">Board of directors</a></li>
-                                <li><a href="history" target="_blank">History</a></li>
+                                <li><a href="{{ url('why-join-us') }}">Why join PSCS?</a></li>
+                                <li><a href="{{ url('become-a-member') }}">How to become a member?</a></li>
+                                <li><a href="{{ url('member-directory') }}">Members directory</a></li>
+                                <li><a href="{{ url('board-of-directors') }}">Board of directors</a></li>
+                                <li><a href="{{ url('history') }}">History</a></li>
                                 <li><a href="https://www.youtube.com/watch?v=kYCTr9YxJIQ&feature=youtu.be&autoplay=0&rel=0"
                                         target="_blank">Education</a></li>
                                 <li><a href="https://youtu.be/xeFyv2uZ0yc?autoplay=0&rel=0" target="_blank">Projects</a>
@@ -283,18 +279,18 @@
 
                         <ul class="list_menu_footer">
                             <li class="current"><a href="{{ url('/') }}">Home<strong></strong></a></li>
-                            <li><a href="javascript:void(0)">About us<strong></strong></a></li>
-                            <li><a href="javascript:void(0)">Projects<strong></strong></a></li>
-                            <li><a href="javascript:void(0)">News &amp; events<strong></strong></a></li>
+                            <li><a href="{{ url('why-join-us') }}">About us<strong></strong></a></li>
+                            <li><a href="https://youtu.be/rPLnqCVVHNo?autoplay=0&rel=0" target="_blank">Projects<strong></strong></a></li>
+                            <li><a href="{{ url('news-and-events') }}">News &amp; events<strong></strong></a></li>
                         </ul>
                     </div>
 
                 </div>
             </footer>
-
+            <!--=======footer=================================-->
         </div>
     </div>
-    <!--=======footer=================================-->
+    
 </body>
 
 </html>

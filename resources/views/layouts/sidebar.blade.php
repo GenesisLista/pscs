@@ -4,7 +4,7 @@
         <ul class="metismenu">
             <li class="g_heading">Member</li>
             <li class="{{ Request::segment(2) === 'home' ? 'active' : null }}"><a href="{{ url('home') }}"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
-            <li class="{{ Request::segment(2) === 'member' ? 'active' : null }}">
+            <li class="{{ Request::segment(1) === 'member' ? 'active' : null }}">
                 <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="icon-users"></i><span>Member</span></a>
                 <ul>
                     <li class="{{ Request::segment(2) === 'new' ? 'active' : null }}"><a href="{{ route('new.index') }}">New</a></li>
