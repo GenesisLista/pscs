@@ -119,7 +119,7 @@
 
                             <div class="grid_12">
                                 <p class="history txt6_become_member">Step 1. Fill up our <a
-                                        href="http://pscs.org.ph/member_mngt/memberships"
+                                        href="{{ route('membership.index') }}"
                                         target="_blank" class="link4">membership form</a></p>
                                 <p class="txt6_become_member">Step 2. Your membership application will be reviewed by
                                     PSCS Board of Directors.</p>

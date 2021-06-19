@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewMemberController;
 use App\Http\Controllers\ActiveMemberController;
 use App\Http\Controllers\RenewalMemberController;
+use App\Http\Controllers\NewMembershipController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +60,5 @@ Route::get('news-and-events', function () {
 Route::get('become-a-member', function () {
     return view('become_a_member');
 });
+
+Route::resource('membership', NewMembershipController::class);
