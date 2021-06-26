@@ -117,7 +117,7 @@
             <!--=======content================================-->
 
             <div class="container">
-                {{ $media }}
+                
                 <div class="row">
                     <div class="grid_12">
                         <h2 class="v3">Membership form</h2>
@@ -162,7 +162,7 @@
                                     <h3 class="v3">&nbsp;</h3>
                                     <div class="wrapper">
                                         <label class="personal_email_address">
-                                            <input id="personal_email_address" name="personal_email_address" type="text"
+                                            <input id="personal_email_address" name="personal_email_address" type="email"
                                                 placeholder="Personal email address *" />
                                         </label>
                                     </div>
@@ -200,7 +200,7 @@
                                     <h3 class="v3">&nbsp;</h3>
                                     <div class="wrapper">
                                         <label class="company_email_address">
-                                            <input id="company_email_address" name="company_email_address" type="text"
+                                            <input id="company_email_address" name="company_email_address" type="email"
                                                 placeholder="Company email address *" />
                                         </label>
                                     </div>
