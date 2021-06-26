@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(SocialMediaSeeder::class); // Social Media Seeder
         $this->call(RetentionSeeder::class); // Retention Seeder
+        $this->call(EducationalAttainmentSeeder::class); // Educational Attainment
     }
 }

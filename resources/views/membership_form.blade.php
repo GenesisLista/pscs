@@ -118,10 +118,15 @@
 
             <div class="container">
                 
+                @if(session('success_add'))
+                <h2 class="no_line"> {{ session('success_add') }} </h2>
+                @endif
+
                 <div class="row">
                     <div class="grid_12">
                         <h2 class="v3">Membership form</h2>
-                        <form id="contact-form">
+                        <form id="contact-form" action="{{ route('membership.store') }}" method="POST" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                             <!-- 1 -->
                             <div class="row">
 
@@ -146,7 +151,7 @@
                                     <div class="wrapper">
                                         <label class="date_of_birth">
                                             <input id="date_of_birth" name="date_of_birth" type="text"
-                                                placeholder="Date of birth *" />
+                                                placeholder="Date of birth * (mm/dd/yyyy)" />
                                         </label>
                                     </div>
 
@@ -189,8 +194,8 @@
                                     </div>
 
                                     <div class="wrapper">
-                                        <label class="telephone_number">
-                                            <input id="telephone_number" name="telephone_number" type="text"
+                                        <label class="length_of_stay">
+                                            <input id="length_of_stay" name="length_of_stay" type="text"
                                                 placeholder="Length of stay *" />
                                         </label>
                                     </div>
@@ -237,9 +242,14 @@
                                 <div class="grid_4">
                                     <h3 class="v3">School Information</h3>
                                     <div class="wrapper">
-                                        <label class="educational_attainment">
-                                            <input id="educational_attainment" name="educational_attainment" type="text"
-                                                placeholder="Educational attainment *" />
+                                        <label>
+                                            <select class="learn_about_pscs" id="educational_attainment"
+                                                name="educational_attainment" style="height: 30px;">
+                                                <option value="" style="display:none">Select one</option>
+                                                @foreach($education as $educ)
+                                                <option value="{{ $educ->id }}">{{ $educ->name }}</option>
+                                                @endforeach
+                                            </select>    
                                         </label>
                                     </div>
 
@@ -277,7 +287,7 @@
                                     </div>
 
                                     <div class="wrapper">
-                                        <label class="company_address">
+                                        <label class="">
                                             &nbsp;
                                         </label>
                                     </div>
@@ -292,8 +302,8 @@
                                     <h3 class="v3">Other Information</h3>
                                     <div class="wrapper">
                                         <label>
-                                            <select class="learn_about_pscs" id="learn_about_pscs"
-                                                name="learn_about_pscs" style="height: 40px;">
+                                            <select class="learn_about_pscs" id="social_media"
+                                                name="social_media" style="height: 40px;">
                                                 <option value="" style="display:none">Select one</option>
                                                 @foreach($media as $medias)
                                                 <option value="{{ $medias->id }}">{{ $medias->name }}</option>
@@ -344,13 +354,23 @@
                                 <div class="grid_3">
                                     <div class="wrapper">
                                         <label>
-                                            <select class="learn_about_pscs" id="learn_about_pscs"
-                                                name="learn_about_pscs" style="height: 40px;">
+                                            <select class="learn_about_pscs" id="allow_retain"
+                                                name="allow_retain" style="height: 40px;">
                                                 @foreach($retention as $retentions)
                                                 <option value="{{ $retentions->id }}">{{ $retentions->name }}</option>
                                                 @endforeach
                                             </select>
                                         </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br/>
+
+                            <div class="row">
+                                <div class="grid_3">
+                                    <div class="wrapper">
+                                        <button type="submit" class="more_btn bg5"> Submit </button>    
                                     </div>
                                 </div>
                             </div>
