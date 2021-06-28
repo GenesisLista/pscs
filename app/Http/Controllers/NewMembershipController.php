@@ -48,6 +48,23 @@ class NewMembershipController extends Controller
      */
     public function store(Request $request, NewMembership $newmember)
     {
+        // Validation
+        $request->validate([
+            'name'=>'required',
+            'telephone_number'=>'required',
+            'date_of_birth'=>'required',
+            'mobile_number'=>'required',
+            'personal_email_address'=>'required|email|unique:new_memberships,personal_email_address',
+            'address'=>'required',
+            'company_name'=>'required',
+            'length_of_stay'=>'required',
+            'company_email_address'=>'required|email|unique:new_memberships,company_email_address',
+            'company_telephone_number'=>'required|numeric',
+            'position'=>'required',
+            'company_address'=>'required',
+            'degree'=>'required'
+        ]);
+
         // Save the values in the DB
         $newmember->name = $request->name;
         $newmember->date_of_birth = $request->date_of_birth;

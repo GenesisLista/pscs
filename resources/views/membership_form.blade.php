@@ -134,14 +134,20 @@
                                     <h3 class="v3">Personal Information</h3>
                                     <div class="wrapper">
                                         <label class="name">
-                                            <input id="name" name="name" type="text" placeholder="Name *" />
+                                            <input id="name" name="name" type="text" placeholder="Name *" value="{{ old('name') }}"/>
+                                            @if($errors->has('name'))
+                                            <span style="color:red;">{{ $errors->first('name') }}</span>
+                                            @endif
                                         </label>
                                     </div>
 
                                     <div class="wrapper">
                                         <label class="telephone_number">
                                             <input id="telephone_number" name="telephone_number" type="text"
-                                                placeholder="Telephone number" />
+                                                placeholder="Telephone number" value="{{ old('telephone_number') }}"/>
+                                            @if($errors->has('telephone_number'))
+                                            <span style="color:red;">{{ $errors->first('telephone_number') }}</span>
+                                            @endif    
                                         </label>
                                     </div>
                                 </div>
@@ -151,14 +157,20 @@
                                     <div class="wrapper">
                                         <label class="date_of_birth">
                                             <input id="date_of_birth" name="date_of_birth" type="text"
-                                                placeholder="Date of birth * (mm/dd/yyyy)" />
+                                                placeholder="Date of birth * (mm/dd/yyyy)" value="{{ old('date_of_birth') }}"/>
+                                            @if($errors->has('date_of_birth'))
+                                            <span style="color:red;">{{ $errors->first('date_of_birth') }}</span>
+                                            @endif    
                                         </label>
                                     </div>
 
                                     <div class="wrapper">
                                         <label class="name">
                                             <input id="mobile_number" name="mobile_number" type="text"
-                                                placeholder="Mobile number *" />
+                                                placeholder="Mobile number *" value="{{ old('mobile_number') }}"/>
+                                            @if($errors->has('mobile_number'))
+                                            <span style="color:red;">{{ $errors->first('mobile_number') }}</span>
+                                            @endif    
                                         </label>
                                     </div>
                                 </div>
@@ -168,13 +180,19 @@
                                     <div class="wrapper">
                                         <label class="personal_email_address">
                                             <input id="personal_email_address" name="personal_email_address" type="email"
-                                                placeholder="Personal email address *" />
+                                                placeholder="Personal email address *" value="{{ old('personal_email_address') }}"/>
+                                            @if($errors->has('personal_email_address'))
+                                            <span style="color:red;">{{ $errors->first('personal_email_address') }}</span>
+                                            @endif
                                         </label>
                                     </div>
 
                                     <div class="wrapper">
                                         <label class="address">
-                                            <input id="address" name="address" type="text" placeholder="Address *" />
+                                            <input id="address" name="address" type="text" placeholder="Address *" value="{{ old('address') }}"/>
+                                            @if($errors->has('address'))
+                                            <span style="color:red;">{{ $errors->first('address') }}</span>
+                                            @endif
                                         </label>
                                     </div>
                                 </div>
@@ -189,14 +207,20 @@
                                     <div class="wrapper">
                                         <label class="company_name">
                                             <input id="company_name" name="company_name" type="text"
-                                                placeholder="Company name *" />
+                                                placeholder="Company name *" value="{{ old('company_name') }}"/>
+                                            @if($errors->has('company_name'))
+                                            <span style="color:red;">{{ $errors->first('company_name') }}</span>
+                                            @endif    
                                         </label>
                                     </div>
 
                                     <div class="wrapper">
                                         <label class="length_of_stay">
                                             <input id="length_of_stay" name="length_of_stay" type="text"
-                                                placeholder="Length of stay *" />
+                                                placeholder="Length of stay *" value="{{ old('length_of_stay') }}"/>
+                                            @if($errors->has('length_of_stay'))
+                                            <span style="color:red;">{{ $errors->first('length_of_stay') }}</span>
+                                            @endif    
                                         </label>
                                     </div>
                                 </div>
@@ -206,14 +230,20 @@
                                     <div class="wrapper">
                                         <label class="company_email_address">
                                             <input id="company_email_address" name="company_email_address" type="email"
-                                                placeholder="Company email address *" />
+                                                placeholder="Company email address *" value="{{ old('company_email_address') }}"/>
+                                            @if($errors->has('company_email_address'))
+                                            <span style="color:red;">{{ $errors->first('company_email_address') }}</span>
+                                            @endif     
                                         </label>
                                     </div>
 
                                     <div class="wrapper">
                                         <label class="company_telephone_number">
                                             <input id="company_telephone_number" name="company_telephone_number"
-                                                type="text" placeholder="Telephone number *" />
+                                                type="text" placeholder="Telephone number *" value="{{ old('company_telephone_number') }}"/>
+                                            @if($errors->has('company_telephone_number'))
+                                            <span style="color:red;">{{ $errors->first('company_telephone_number') }}</span>
+                                            @endif    
                                         </label>
                                     </div>
                                 </div>
@@ -222,14 +252,20 @@
                                     <h3 class="v3">&nbsp;</h3>
                                     <div class="wrapper">
                                         <label class="position">
-                                            <input id="position" name="position" type="text" placeholder="Position *" />
+                                            <input id="position" name="position" type="text" placeholder="Position *" value="{{ old('position') }}"/>
+                                            @if($errors->has('position'))
+                                            <span style="color:red;">{{ $errors->first('position') }}</span>
+                                            @endif    
                                         </label>
                                     </div>
 
                                     <div class="wrapper">
                                         <label class="company_address">
                                             <input id="company_address" name="company_address" type="text"
-                                                placeholder="Company address *" />
+                                                placeholder="Company address *" value="{{ old('company_address') }}"/>
+                                            @if($errors->has('company_address'))
+                                            <span style="color:red;">{{ $errors->first('company_address') }}</span>
+                                            @endif      
                                         </label>
                                     </div>
                                 </div>
@@ -247,7 +283,7 @@
                                                 name="educational_attainment" style="height: 30px;">
                                                 <option value="" style="display:none">Select one</option>
                                                 @foreach($education as $educ)
-                                                <option value="{{ $educ->id }}">{{ $educ->name }}</option>
+                                                <option value="{{ $educ->id }}"{{ old('educational_attainment') == $educ->id ? 'selected':'' }}>{{ $educ->name }}</option>
                                                 @endforeach
                                             </select>    
                                         </label>
@@ -256,7 +292,7 @@
                                     <div class="wrapper">
                                         <label class="prc_number">
                                             <input id="prc_number" name="prc_number" type="text"
-                                                placeholder="PRC Number" />
+                                                placeholder="PRC Number" value="{{ old('prc_number') }}"/>
                                         </label>
                                     </div>
                                 </div>
@@ -266,14 +302,17 @@
                                     <div class="wrapper">
                                         <label class="school_university">
                                             <input id="school_university" name="school_university" type="text"
-                                                placeholder="School / University *" />
+                                                placeholder="School / University *" value="{{ old('school_university') }}"/>
+                                            @if($errors->has('company_address'))
+                                            <span style="color:red;">{{ $errors->first('company_address') }}</span>
+                                            @endif      
                                         </label>
                                     </div>
 
                                     <div class="wrapper">
                                         <label class="graduate_school">
                                             <input id="graduate_school" name="graduate_school" type="text"
-                                                placeholder="Graduate school" />
+                                                placeholder="Graduate school" value="{{ old('graduate_school') }}"/>
                                         </label>
                                     </div>
                                 </div>
@@ -282,7 +321,10 @@
                                     <h3 class="v3">&nbsp;</h3>
                                     <div class="wrapper">
                                         <label class="degree">
-                                            <input id="degree" name="degree" type="text" placeholder="Degree *" />
+                                            <input id="degree" name="degree" type="text" placeholder="Degree *" value="{{ old('degree') }}"/>
+                                            @if($errors->has('degree'))
+                                            <span style="color:red;">{{ $errors->first('degree') }}</span>
+                                            @endif    
                                         </label>
                                     </div>
 
@@ -306,7 +348,7 @@
                                                 name="social_media" style="height: 40px;">
                                                 <option value="" style="display:none">Select one</option>
                                                 @foreach($media as $medias)
-                                                <option value="{{ $medias->id }}">{{ $medias->name }}</option>
+                                                <option value="{{ $medias->id }}" {{ old('social_media') == $medias->id ? 'selected':'' }}>{{ $medias->name }}</option>
                                                 @endforeach
                                             </select>
                                         </label>
@@ -318,7 +360,7 @@
                                     <div class="wrapper">
                                         <label class="learn_about_pscs">
                                             <input id="learn_about_pscs" name="learn_about_pscs" type="text"
-                                                placeholder="Who do we thank for inviting you to join PSCS?" />
+                                                placeholder="Who do we thank for inviting you to join PSCS?" value="{{ old('learn_about_pscs') }}"/>
                                         </label>
                                     </div>
                                 </div>
@@ -357,7 +399,7 @@
                                             <select class="learn_about_pscs" id="allow_retain"
                                                 name="allow_retain" style="height: 40px;">
                                                 @foreach($retention as $retentions)
-                                                <option value="{{ $retentions->id }}">{{ $retentions->name }}</option>
+                                                <option value="{{ $retentions->id }}" {{ old('allow_retain') == $retentions->id ? 'selected':'' }}>{{ $retentions->name }}</option>
                                                 @endforeach
                                             </select>
                                         </label>
