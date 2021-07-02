@@ -16,7 +16,7 @@ class CreateNewMembershipsTable extends Migration
         Schema::create('new_memberships', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('date_of_birth')->nullable();
+            $table->date('date_of_birth')->nullable();
             $table->string('personal_email_address')->nullable();
             $table->string('personal_tel_number')->nullable();
             $table->string('mobile_number')->nullable();
@@ -35,6 +35,7 @@ class CreateNewMembershipsTable extends Migration
             $table->bigInteger('social_media_id')->unsigned()->nullable(); // Foreign Key
             $table->string('who_invite')->nullable();
             $table->bigInteger('allow_retention_id')->unsigned()->nullable(); // Foreign Key
+            $table->integer('status')->nullable(); // Member Status
 
             // Foreign Keys
             $table->foreign('educational_id')->references('id')->on('educational_attainments')->onUpdate('cascade')->onDelete('restrict');

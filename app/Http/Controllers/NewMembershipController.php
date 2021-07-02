@@ -53,7 +53,7 @@ class NewMembershipController extends Controller
             'name'=>'required',
             'telephone_number'=>'required',
             'date_of_birth'=>'required',
-            'mobile_number'=>'required',
+            'mobile_number'=>'required|numeric',
             'personal_email_address'=>'required|email|unique:new_memberships,personal_email_address',
             'address'=>'required',
             'company_name'=>'required',

@@ -30,6 +30,7 @@ class NewMembership extends Model
         'graduate_school',
         'social_media_id',
         'who_invite',
-        'allow_retention_id'
+        'allow_retention_id',
+        'status'
     ];
 }
