@@ -62,7 +62,7 @@
                                         <td>{{ $newmember->company_name }}</td>
                                         <td>{{ $newmember->position }}</td>
                                         <td>{{ $newmember->mobile_number }}</td>
-                                        <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $newmember->created_at)->format('m/d/Y'); }}</td>
+                                        <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $newmember->created_at)->format('m/d/Y') }}</td>
                                         <td>
                                             <a href="{{ route('new.show', $newmember->id) }}"><button type="submit" class="btn btn-icon btn-sm" title="Details"><i class="fa fa-eye"></i></button></a>
                                         </td>
