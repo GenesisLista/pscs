@@ -12,57 +12,24 @@
                         <div class="circle">
                             <img class="rounded-circle" src="{{ asset('assets/images/sm/avatar1.jpg') }}" alt="">
                         </div>
-                        <h6 class="mt-3 mb-0">Michelle Green</h6>
-                        <span>jason-porter@info.com</span>
+                        <h6 class="mt-3 mb-0">{{ $newmembership->name }}</h6>
+                        <span>Member Since 2018</span>
                         <ul class="mt-3 list-unstyled d-flex justify-content-center">
                             <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
                             <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
-                        <button class="btn btn-default btn-sm">Follow</button>
-                        <button class="btn btn-default btn-sm">Message</button>
                     </div>
                 </div>
+                
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Ticket Details</h3>
+                        <h3 class="card-title">Membership Information</h3>
                         <div class="card-options">
-                            <a href="javascript:void(0)" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
                             <div class="item-action dropdown ml-2">
                                 <a href="javascript:void(0)" data-toggle="dropdown"><i class="fe fe-more-vertical"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-eye"></i> View Details </a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-share-alt"></i> Share </a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-cloud-download"></i> Download</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-copy"></i> Copy to</a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-folder"></i> Move to</a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-edit"></i> Rename</a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-trash"></i> Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <span>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia</span>
-                    </div>                        
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Ticket Info</h3>
-                        <div class="card-options">
-                            <a href="javascript:void(0)" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
-                            <div class="item-action dropdown ml-2">
-                                <a href="javascript:void(0)" data-toggle="dropdown"><i class="fe fe-more-vertical"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-eye"></i> View Details </a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-share-alt"></i> Share </a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-cloud-download"></i> Download</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-copy"></i> Copy to</a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-folder"></i> Move to</a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-edit"></i> Rename</a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-trash"></i> Delete</a>
                                 </div>
                             </div>
                         </div>
@@ -70,26 +37,16 @@
                     <div class="card-body">
                         <ul class="list-group">
                             <li class="list-group-item">
-                                <small class="text-muted">Title: </small>
-                                <p class="mb-0">Oculux Admin Template</p>
+                                <p class="mb-0">July 16, 2018 - New Member</p>
                             </li>
                             <li class="list-group-item">
-                                <small class="text-muted">Department: </small>
-                                <p  class="mb-0">Pre-Sales</p>
+                                <p class="mb-0">July 16, 2019 - Renewal</p>
                             </li>
                             <li class="list-group-item">
-                                    <small class="text-muted">Product: </small>
-                                    <p  class="mb-0">Oculux Side Menu Open OnClick</p>
-                                </li>
-                            <li class="list-group-item">
-                                <small class="text-muted">Date: </small>
-                                <p  class="mb-0">07 Feb 2019</p>
+                                <p class="mb-0">July 16, 2020 - Renewal</p>
                             </li>
                             <li class="list-group-item">
-                                <div>In Progress</div>
-                                <div class="progress progress-xs mb-0">
-                                    <div class="progress-bar bg-info" style="width: 58%"></div>
-                                </div>
+                                <p class="mb-0">July 16, 2021 - Renewal</p>
                             </li>
                         </ul>
                     </div>
@@ -97,133 +54,160 @@
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="card">
-                    <div class="card-body">
-                        <div class="summernote">
-                            Hi there,
-                            <br/>
-                            <p>The toolbar can be customized and it also supports various callbacks such as <code>oninit</code>, <code>onfocus</code>, <code>onpaste</code> and many more.</p>
-                            <br/>
-                            <p>Thank you!</p>
-                            <h6>Summer Note</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Ticket Replies</h3>
+                        <h3 class="card-title">Personal Information</h3>
                         <div class="card-options">
-                            <a href="javascript:void(0)" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
                             <div class="item-action dropdown ml-2">
                                 <a href="javascript:void(0)" data-toggle="dropdown"><i class="fe fe-more-vertical"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-eye"></i> View Details </a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-share-alt"></i> Share </a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-cloud-download"></i> Download</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-copy"></i> Copy to</a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-folder"></i> Move to</a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-edit"></i> Rename</a>
-                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-trash"></i> Delete</a>
+                                    <a href="{{ route('new.issue_soa', $newmembership->id) }}" class="dropdown-item"><i class="dropdown-icon fa fa-cloud-download"></i> SOA</a>
+                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-edit"></i> Approved</a>
+                                    <a href="javascript:void(0)" onclick="$(this).parent().find('form').submit()" class="dropdown-item"><i class="dropdown-icon fa fa-trash"></i> Delete</a>
+                                    <form method="post" action="{{ route('new.destroy', $newmembership->id) }}">
+                                        @method('DELETE')
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="timeline_item ">
-                            <img class="tl_avatar" src="{{ asset('assets/images/xs/avatar1.jpg') }}" alt="">
-                            <span><a href="javascript:void(0);">Elisse Joson</a> San Francisco, CA <small class="float-right text-right">20-April-2019 - Today</small></span>
-                            <h6 class="font600">Hello, 'Im a single div responsive timeline without media Queries!</h6>
-                            <div class="msg">
-                                <p>I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web card she has is the Lorem card.</p>
-                                <a href="javascript:void(0);" class="mr-20 text-muted"><i class="fa fa-heart text-pink"></i> 12 Love</a>
-                                <a class="text-muted" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-comments"></i> 1 Comment</a>
-                                <div class="collapse p-4 section-gray mt-2" id="collapseExample">
-                                    <form class="well">
-                                        <div class="form-group">
-                                            <textarea rows="2" class="form-control no-resize" placeholder="Enter here for tweet..."></textarea>
-                                        </div>
-                                        <button class="btn btn-primary">Submit</button>
-                                    </form>
-                                    <ul class="recent_comments list-unstyled mt-4 mb-0">
-                                        <li>
-                                            <div class="avatar_img">
-                                                <img class="rounded img-fluid" src="{{ asset('assets/images/xs/avatar4.jpg') }}" alt="">
-                                            </div>
-                                            <div class="comment_body">
-                                                <h6>Donald Gardner <small class="float-right font-14">Just now</small></h6>
-                                                <p>Lorem ipsum Veniam aliquip culpa laboris minim tempor</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>                                
-                        </div>
-                        <div class="timeline_item ">
-                            <img class="tl_avatar" src="{{ asset('assets/images/xs/avatar4.jpg') }}" alt="">
-                            <span><a href="javascript:void(0);" title="">Dessie Parks</a> Oakland, CA <small class="float-right text-right">19-April-2019 - Yesterday</small></span>
-                            <h6 class="font600">Oeehhh, that's awesome.. Me too!</h6>
-                            <div class="msg">
-                                <p>I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.</p>
-                                <div class="timeline_img mb-20">
-                                    <img class="width100" src="{{ asset('assets/images/gallery/1.jpg') }}" alt="Awesome Image">
-                                    <img class="width100" src="{{ asset('assets/images/gallery/2.jpg') }}" alt="Awesome Image">
-                                </div>
-                                <a href="javascript:void(0);" class="mr-20 text-muted"><i class="fa fa-heart text-pink"></i> 23 Love</a>
-                                <a class="text-muted" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"><i class="fa fa-comments"></i> 2 Comment</a>
-                                <div class="collapse p-4 section-gray mt-2" id="collapseExample1">
-                                    <form class="well">
-                                        <div class="form-group">
-                                            <textarea rows="2" class="form-control no-resize" placeholder="Enter here for tweet..."></textarea>
-                                        </div>
-                                        <button class="btn btn-primary">Submit</button>
-                                    </form>
-                                    <ul class="recent_comments list-unstyled mt-4 mb-0">
-                                        <li>
-                                            <div class="avatar_img">
-                                                <img class="rounded img-fluid" src="{{ asset('assets/images/xs/avatar4.jpg') }}" alt="">
-                                            </div>
-                                            <div class="comment_body">
-                                                <h6>Donald Gardner <small class="float-right font-14">Just now</small></h6>
-                                                <p>Lorem ipsum Veniam aliquip culpa laboris minim tempor</p>
-                                                <div class="timeline_img mb-20">
-                                                    <img class="width150" src="{{ asset('assets/images/gallery/7.jpg') }}" alt="Awesome Image">
-                                                    <img class="width150" src="{{ asset('assets/images/gallery/8.jpg') }}" alt="Awesome Image">
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="avatar_img">
-                                                <img class="rounded img-fluid" src="{{ asset('assets/images/xs/avatar3.jpg') }}" alt="">
-                                            </div>
-                                            <div class="comment_body">
-                                                <h5>Dessie Parks <small class="float-right font-14">1min ago</small></h5>
-                                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>                                    
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <span><strong>Name</strong></span><br>
+                                <span>{{ $newmembership->name }}</span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>Date of birth</strong></span><br>
+                                <span>{{ $newmembership->date_of_birth }}</span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>Personal email address</strong></span><br>
+                                <span>{{ $newmembership->personal_email_address }}</span> 
                             </div>
                         </div>
-                        <div class="timeline_item ">
-                            <img class="tl_avatar" src="{{ asset('assets/images/xs/avatar7.jpg') }}" alt="">
-                            <span><a href="javascript:void(0);" title="">Rochelle Barton</a> San Francisco, CA <small class="float-right text-right">12-April-2019</small></span>
-                            <h6 class="font600">An Engineer Explains Why You Should Always Order the Larger Pizza</h6>
-                            <div class="msg">
-                                <p>I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, is the Lorem card.</p>
-                                <a href="javascript:void(0);" class="mr-20 text-muted"><i class="fa fa-heart text-pink"></i> 7 Love</a>
-                                <a class="text-muted" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"><i class="fa fa-comments"></i> 1 Comment</a>
-                                <div class="collapse p-4 section-gray mt-2" id="collapseExample2">
-                                    <form class="well">
-                                        <div class="form-group">
-                                            <textarea rows="2" class="form-control no-resize" placeholder="Enter here for tweet..."></textarea>
-                                        </div>
-                                        <button class="btn btn-primary">Submit</button>
-                                    </form>
-                                </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <span><strong>Telephone number</strong></span><br>
+                                <span>{{ $newmembership->personal_tel_number }}</span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>Mobile number</strong></span><br>
+                                <span>{{ $newmembership->mobile_number }}</span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>Address</strong></span><br>
+                                <span>{{ $newmembership->personal_address }}</span> 
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Work Information</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <span><strong>Company name</strong></span><br>
+                                <span>{{ $newmembership->company_name }}</span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>Company email address</strong></span><br>
+                                <span>{{ $newmembership->company_email_address }}</span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>Position</strong></span><br>
+                                <span>{{ $newmembership->position }}</span> 
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <span><strong>Length of stay</strong></span><br>
+                                <span>
+                                @if($newmembership->length_of_stay == null)
+                                0 year(s)
+                                @else
+                                {{ $newmembership->length_of_stay }} year(s)
+                                @endif
+                                </span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>Telephone number</strong></span><br>
+                                <span>{{ $newmembership->company_tel_number }}</span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>Company Address</strong></span><br>
+                                <span>{{ $newmembership->company_address }}</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">School Information</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <span><strong>Educational attainment</strong></span><br>
+                                <span>
+                                @if($newmembership->educational_id != null)
+                                {{ $newmembership->educational_info->name }}
+                                @endif
+                                </span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>School / University</strong></span><br>
+                                <span>{{ $newmembership->school_university }}</span> 
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span><strong>Degree</strong></span><br>
+                                <span>{{ $newmembership->degree }}</span> 
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <span><strong>PRC number</strong></span><br>
+                                <span>{{ $newmembership->prc_number }}</span> 
+                            </div>
+                            <div class="col-md-8 text-center">
+                                <span><strong>Graduate School</strong></span><br>
+                                <span>{{ $newmembership->graduate_school }}</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Other Information</h3>
+                    </div>
+                    <div class="card-body">
+                        
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <span><strong>How do you learn about PSCS</strong></span><br>
+                                <span>
+                                @if($newmembership->social_media_id != null)
+                                {{ $newmembership->social_media_info->name }}
+                                @endif
+                                </span> 
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <span><strong>Who do we thank for inviting you to join PSCS</strong></span><br>
+                                <span>{{ $newmembership->who_invite }}</span> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

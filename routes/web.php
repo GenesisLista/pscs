@@ -29,7 +29,9 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     
     Route::prefix('member')->group(function () {
+        Route::get('/new/issue-soa/{id}', [NewMemberController::class, 'issue_soa'])->name('new.issue_soa');
         Route::resource('new', NewMemberController::class);
+        
         Route::resource('active', ActiveMemberController::class);
         Route::resource('renewal', RenewalMemberController::class);
     });

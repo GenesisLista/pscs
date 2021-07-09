@@ -104,7 +104,10 @@ class NewMemberController extends Controller
      */
     public function show($id)
     {
-        return view('new_member.show');
+        $newmembership = NewMembership::findOrFail($id);
+        return view('new_member.show')->with([
+            'newmembership'=>$newmembership
+        ]);
     }
 
     /**
@@ -138,6 +141,18 @@ class NewMemberController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Delete the values in the DB
+        NewMembership::destroy($id);
+
+        return redirect()->route('new.index')->with('success_delete', 'Record deleted successfully');
+    }
+
+    // This is to view SOA
+    public function issue_soa($id)
+    {
+        $newmembership = NewMembership::findOrFail($id);
+        return view('new_member.issue_soa')->with([
+            'newmembership'=>$newmembership
+        ]);
     }
 }

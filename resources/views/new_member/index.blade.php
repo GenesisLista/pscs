@@ -42,7 +42,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-hover js-basic-example dataTable table_custom border-style spacing5 text-center">
+                            <table class="table table-hover table-striped table-vcenter js-basic-example dataTable table_custom border-style spacing5 text-center">
                                 <thead>
                                     <tr>
                                         <th>#</th>
