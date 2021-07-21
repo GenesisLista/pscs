@@ -9,13 +9,10 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">SOA No: 2021-0011 <br> July 08, 2021</h3>
-                        
+                        <h3 class="card-title">SOA No: {{ $soa_number }} <br> {{ Carbon\Carbon::now()->format('m/d/Y') }} </h3>
                         <div class="card-options">
-                            <a href="{{ route('new.show', 1) }}" class="btn btn-primary"> Back</a>
-                            &nbsp;
-                            <button type="button" class="btn btn-primary"><i class="si si-printer"></i> Send SOA</button>
-                        </div>
+                            <a href="{{ route('new.show', $newmembership->id) }}" class="btn btn-primary"> Back</a>
+                            <a href="{{ route('new.send_soa', [$newmembership->id, $soa_number]) }}" class="btn btn-primary"><i class="si si-printer"></i> Send SOA</a>                        </div>
                     </div>
                     <div class="card-body">
                         <div class="row my-8">

@@ -7,6 +7,12 @@ use App\Http\Controllers\ActiveMemberController;
 use App\Http\Controllers\RenewalMemberController;
 use App\Http\Controllers\NewMembershipController;
 
+use App\Notifications\SendSoa;
+
+use Carbon\Carbon;
+
+use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +35,9 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     
     Route::prefix('member')->group(function () {
+        // Route::post('/new/activate-member', [NewMemberController::class, 'activate_member'])->name('new.activate_member');
+        Route::get('/new/approved/{id}', [NewMemberController::class, 'appoved_member'])->name('new.approved_member');
+        Route::get('/new/send-soa/{id}/{soa}', [NewMemberController::class, 'send_soa'])->name('new.send_soa');
         Route::get('/new/issue-soa/{id}', [NewMemberController::class, 'issue_soa'])->name('new.issue_soa');
         Route::resource('new', NewMemberController::class);
         
@@ -64,3 +73,15 @@ Route::get('become-a-member', function () {
 });
 
 Route::resource('membership', NewMembershipController::class);
+
+// Test notification
+Route::get('notification/{uid}', function ($uid) {
+    // $user = User::first();
+    // $user->notify(new \App\Notifications\SendSoa());
+    // return 'GBL ' . $user;
+
+    $when = Carbon::now()->addSeconds(10);
+	$user = User::find($uid);
+	$user->notify((new \App\Notifications\SendSoa())->delay($when));
+	return 'Send ' . $user;
+});

@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 
 // Carbon
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 // Models
 use App\Models\SocialMedia;
 use App\Models\EducationalAttainment;
 use App\Models\NewMembership;
+use App\Models\Renewal;
 
 class NewMemberController extends Controller
 {
@@ -130,7 +132,55 @@ class NewMemberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Validation
+        $request->validate([
+            'soa_no' => 'required'
+        ]);
+
+        // Save the details in the db
+
+        /**
+         * Change the status from NULL to 1 for approved 
+         */
+        $status = NewMembership::findOrFail($id);
+        $status->status = 1;
+        $status->save();
+
+        /**
+         * This will save the values in renewal db
+         */
+        $renewal = new Renewal();
+        $renewal->soa_no = $request->soa_no;
+        $renewal->start_date = Carbon::createFromFormat('m/d/Y', $request->start_date)->format('Y-m-d');
+        $renewal->notes = $request->notes;
+        $renewal->type = 1;
+
+        /**
+         * This is for the attach file
+         */
+        if($request->hasFile('file')) {
+            // Generate Code
+            $date = Carbon::now();
+            $code = $date->format('jny').''.Str::upper(Str::random(4));
+
+            // File name
+            $file = $request->file;
+            $random_str = Str::upper(Str::random(4));
+            $file_name = $code.'_'.$random_str.'.'.Str::lower($file->extension()); 
+       
+            // Upload path
+            $file->storeAS('public/membership',$file_name);
+            $renewal->file = $file_name;
+        }
+
+        $renewal->save();
+
+        /**
+         * This is to save the pivot table
+         */
+        $renewal->new_memberships()->attach($id);
+        
+        return redirect()->route('new.index')->with('success_approved', 'Record approved successfully');
     }
 
     /**
@@ -147,11 +197,37 @@ class NewMemberController extends Controller
         return redirect()->route('new.index')->with('success_delete', 'Record deleted successfully');
     }
 
-    // This is to view SOA
+    // This is to view SOA Details
     public function issue_soa($id)
     {
+        // Generate Code
+        $date = Carbon::now();
+        $soa = $date->format('njY').''.Str::upper(Str::random(4));
+
         $newmembership = NewMembership::findOrFail($id);
         return view('new_member.issue_soa')->with([
+            'newmembership'=>$newmembership,
+            'soa_number'=>$soa
+        ]);
+    }
+
+    /** 
+     * This is to send Statement Of Account 
+     * to members via email
+     */
+    public function send_soa($id, $soa)
+    {
+        return $id . ' ' . $soa;
+    }
+
+    /**
+     * This is to display the form to enter the 
+     * SOA and Start Date
+     */
+    public function appoved_member($id)
+    {
+        $newmembership = NewMembership::findOrFail($id);
+        return view('new_member.approved_member')->with([
             'newmembership'=>$newmembership
         ]);
     }

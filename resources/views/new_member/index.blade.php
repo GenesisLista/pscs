@@ -25,9 +25,9 @@
                     <strong>Success!</strong> {{ session('success_add') }}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
                 </div>
-                @elseif(session('success_update'))
+                @elseif(session('success_approved'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>Success!</strong> {{ session('success_update') }}
+                    <strong>Success!</strong> {{ session('success_approved') }}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
                 </div>
                 @elseif(session('success_delete'))
